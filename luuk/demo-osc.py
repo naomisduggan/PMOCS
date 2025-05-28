@@ -37,10 +37,10 @@ switch.compute_responsecurve()
 
 #Simulation for a system without noise, with possible time delay
 
-tau = 0.0
+tau = 0.1
 kX = 1.6
 kappa = 5.
-epsilon = 0.5
+epsilon = 0.05
 
 # threshold value used in a(X_T)
 Xc = 0.5*(switch.folds[0][0] + switch.folds[1][0])
@@ -77,7 +77,6 @@ for i,da in enumerate([0, 0.3]):
     axes[i,0].plot(XTv,Xv)
     axes[i,1].plot(tv, Xv, label='$X$')
     axes[i,1].plot(tv, XTv, label='$X_T$')
-    axes[i,1].set_xscale('log')
 
     #detect period using two thresholds
     #thresholds are up and down
